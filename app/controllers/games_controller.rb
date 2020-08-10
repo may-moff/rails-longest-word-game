@@ -13,7 +13,7 @@ class GamesController < ApplicationController
     @guess = params[:guess]
     @included = included?(@guess, @letters)
     if @included == false
-      @score = "Sorry you cant make that word from the letter you were given"
+      @score = "Sorry but #{@guess} can't be built out of #{@letters}"
     # if @letters.include?(@guess.sort) == false
     #   @score = "Sorry, thats not a word"
     # end
